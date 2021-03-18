@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main-content{
+    background-color: rgb(187, 184, 184);
+    min-height: 980px;
+}
+.header{
+    padding: 20px;
+    display: inline-block;
+}
+.header h1{
+    width: 300px;
+    border: dotted;
+    display: inline-block;
+}
+.header h3{
+    border: dotted;
+    display: inline-block;
+    margin-left: 975px;
+}

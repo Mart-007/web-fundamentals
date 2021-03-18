@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;  
+}
+body {
+    background-color: rgb(66, 66, 156);
+}
+.header{
+    margin: 20px;
+    padding: 20px;
+    color: rgb(214, 216, 218);
+    background-color:red;
+    border-radius: 20px;
+    opacity: 70%;
+}
+#main-content{
+    margin: 20px;
+    display: inline-block;
+}
+.content-1{
+    margin-left: 0;
+    padding: 30px;
+    color: rgb(226, 223, 223);
+    background-color: rgb(62, 163, 163);
+    border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    opacity: 80%;   
+}
+.content-1 > ul > li > a{
+    color: white;
+}
+.sub-content, a{
+    margin-left: 20px;
+    color: white;
+}
+.content-2{
+    margin: 0 20px;
+    margin-left: 17%;
+    padding: 30px;
+    color: rgb(192, 189, 189);
+    background-color: rgb(29, 27, 27);
+    border-radius: 20px;
+    width: 96.5em;
+    vertical-align: right;
+    opacity: 80%;
+}
+.content-2 ul > li > a > span{
+    color: rgb(62, 163, 163);
+}
+span{
+    color: rgb(98, 71, 252);
+}
+.footer{
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(102, 104, 105);   
+    border-radius: 20px;
+    opacity: 70%;
+    color: aliceblue;
+}
+.footer p > a > span  {
+    color:rgb(62, 163, 163); 
+}
+
+marquee{
+    background-color: aliceblue;
+    padding: 20px;
+    position: absolute;
+    margin-top: 150px;
+    color: rgb(17, 116, 197);
+    opacity: 70%;
+}
