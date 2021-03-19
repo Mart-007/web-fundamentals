@@ -4,13 +4,13 @@
 }
 .container{
     background-color: rgb(173, 179, 119);
-    height: 980px;
+    height: 120em;
 }
 .header{
-    margin-left: 25%;
+    margin-left: 390px;
 }
 .github{
-    width: 250px;
+    width: 270px;
     height: 170px;
     margin: 40px ;
     display: inline-block;
@@ -30,3 +30,32 @@
     display: inline-block;
     margin-left: 450px;
 }
+.content{
+    display: inline-block;
+}
+    .imageOne, .imageSix, .imageEleven, .imageSixteen{
+        width: 260px;
+        height: 300px;
+        background-color: rgb(6, 186, 218);
+        padding: 30px;
+        margin-left: 100px;
+        margin-top: 10px;
+        border: solid black 4px;
+    }
+    .imageTwo, .imageFour, .imageSeven, .imageNine, .imageTwelve, .imageFourteen, .imageSeventeen, .imageNineteen{
+        width: 260px;
+        height: 300px;
+        background-color: rgb(245, 126, 126);
+        padding: 30px;
+        margin-left: 10px;
+        border: solid black 4px;    
+    }
+    .imageThree, .imageFive, .imageEight, .imageTen, .imageThirteen, .imageFifteen, .imageEighteen, .imageTwenty{
+        width: 260px;
+        height: 300px;
+        background-color: rgb(6, 186, 218);
+        padding: 30px;
+        margin-left: 10px;
+        border: solid black 4px;    
+    }
+  

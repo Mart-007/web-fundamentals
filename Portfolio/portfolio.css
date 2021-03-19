@@ -2,21 +2,258 @@
     margin: 0;
     padding: 0;
 }
-#main-content{
-    background-color: rgb(187, 184, 184);
-    min-height: 980px;
+body {
+    background-color: rgb(134, 134, 134);
+}
+#container{
+    width: 1000px;
+    min-height: 75em;
+    background-color: rgb(223, 221, 221);
+    margin: auto;
 }
 .header{
+    width: 960px;
     padding: 20px;
     display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
 }
-.header h1{
+    .header h1, h3{
     width: 300px;
-    border: dotted;
+    display: inline-block; 
+    color: rgb(22, 21, 21);
+    }
+    .header h3{
+        width: 400px;
+        margin-left: 250px;
+    }
+.content{
+    margin: 10px 0px;
+    background-image: linear-gradient(to right, rgb(100, 64, 64),rgb(151, 102, 102),rgb(180, 116, 116), rgb(116, 49, 49));
+    width: 1000px;
+    min-height: 63em;
     display: inline-block;
 }
-.header h3{
-    border: dotted;
+.content .profile, .about{
     display: inline-block;
-    margin-left: 975px;
 }
+    .profile{
+        width: 400px;
+        min-height: 288px;
+        margin: 20px;
+        margin-left: 40px;
+        border: solid rgb(173, 171, 171) 5px;
+    }
+    .about{
+        width: 480px;
+        min-height: 230px;
+        margin-top: 20px;
+        margin-left: 10px;
+        border: solid rgb(128, 126, 126) 1px;
+        position: absolute;
+        background-image: linear-gradient(to right, rgb(196, 193, 193),rgb(212, 209, 209),rgb(212, 209, 209), rgb(196, 193, 193));
+
+    }
+        .about h4{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(139, 137, 137),rgb(184, 181, 181),rgb(184, 181, 181), rgb(139, 137, 137));
+            padding: 5px;
+            padding-left: 20px;
+            color: white;
+        }
+        .about p{
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        a, span {
+            color: rgb(43, 42, 42);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .column .column_one, .column_two, .column_three{
+            margin: 10px;
+            margin-left: 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        /* This is row one */
+        .column_one{
+            width: 300px;
+            min-height: 620px;
+            margin-top: 20px;
+            border: solid rgb(194, 193, 193) 1px;
+            background-image: linear-gradient(to right, rgb(228, 226, 226),rgb(236, 230, 230),rgb(212, 209, 209), rgb(196, 193, 193));
+        }
+            .column_one h3{
+                width: 285px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: linear-gradient(to right, rgb(139, 137, 137),rgb(184, 181, 181),rgb(184, 181, 181), rgb(139, 137, 137));
+                padding: 5px;
+                padding-left: 10px;
+                color: white;
+            }
+            .lamode{
+                width: 300px;
+                border-bottom: solid rgb(212, 210, 210) 1px;
+            }
+            .column_one p{
+                margin-bottom: 75px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: justify;
+                color: rgb(36, 35, 35);
+                padding: 10px;
+            }
+            .technologies_img_one{
+                margin: 10px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+                .technologies_img_one .imgOne, .imgTwo, .imgThree, .imgFour, .imgFive, .imgSix, .imgSeven, .imgEight, .imgNine{
+                    width: 40px;
+                    height: 40px;
+                    padding: 3px;
+                }
+            .column_one a{
+                margin-top: 100px;
+                margin-left: 110px;
+                padding: 5px;
+                font-weight: bold;
+                text-decoration: none;
+                background-color: green;
+                border-radius: 5px;
+                border: solid rgb(14, 13, 13) 1px;
+                border-right: solid rgb(167, 165, 165) 3px;
+                border-bottom: solid rgb(167, 165, 165) 3px;
+            }
+            .column_one span{
+                color: rgb(205, 209, 212);
+            }
+            /* This is row two */
+        .column_two{
+            width: 300px;
+            min-height: 620px;
+            border: solid rgb(194, 193, 193) 1px;
+            margin-left: 5px;
+            background-image: linear-gradient(to right, rgb(228, 226, 226),rgb(236, 230, 230),rgb(212, 209, 209), rgb(196, 193, 193));
+
+        }
+            .column_two h3{
+                width: 285px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: linear-gradient(to right, rgb(139, 137, 137),rgb(184, 181, 181),rgb(184, 181, 181), rgb(139, 137, 137));
+                padding: 5px;
+                padding-left: 10px;
+                color: white;
+            }
+            .familycontacts{
+                width: 300px;
+                border-bottom: solid rgb(212, 210, 210) 1px;
+            }
+            .column_two p{
+                margin-bottom: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: justify;
+                color: rgb(36, 35, 35);
+                padding: 10px;
+            }
+            .technologies_img_two{
+                margin: 10px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+                .technologies_img_two .imgOne, .imgTwo, .imgThree, .imgFour, .imgFive, .imgSix, .imgSeven, .imgEight, .imgNine{
+                    width: 40px;
+                    height: 40px;
+                    padding: 3px;
+                }
+            .column_two a{
+                margin-top: 100px;
+                margin-left: 80px;
+                padding: 5px;
+                font-weight: bold;
+                text-decoration: none;
+                background-color: green;
+                border-radius: 5px;
+                border: solid rgb(14, 13, 13) 1px;
+                border-right: solid rgb(167, 165, 165) 3px;
+                border-bottom: solid rgb(167, 165, 165) 3px;
+            }
+            .column_two span{
+                color: rgb(205, 209, 212);
+            }
+            /* This is row three */
+        .column_three{
+            width: 300px;
+            min-height: 620px;
+            margin-left: 5px;
+            border: solid rgb(194, 193, 193) 1px;
+            background-image: linear-gradient(to right, rgb(228, 226, 226),rgb(236, 230, 230),rgb(212, 209, 209), rgb(196, 193, 193));
+        }
+            .column_three h3{
+                width: 285px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: linear-gradient(to right, rgb(139, 137, 137),rgb(184, 181, 181),rgb(184, 181, 181), rgb(139, 137, 137));
+                padding: 5px;
+                padding-left: 10px;
+                color: white;
+            }
+            .fiveEleven{
+                width: 300px;
+                border-bottom: solid rgb(212, 210, 210) 1px;
+            }
+            .column_three p{
+                margin-bottom: 3px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: justify;
+                color: rgb(36, 35, 35);
+                padding: 10px;
+            }
+            .technologies_img_three{
+                margin: 10px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+                .technologies_img_three .imgOne, .imgTwo, .imgThree, .imgFour, .imgFive, .imgSix, .imgSeven, .imgEight, .imgNine{
+                    width: 40px;
+                    height: 40px;
+                    padding: 3px;
+                }
+            .column_three a{
+                margin-top: 100px;
+                margin-left: 105px;
+                padding: 5px;
+                font-weight: bold;
+                text-decoration: none;
+                background-color: green;
+                border-radius: 5px;
+                border: solid rgb(14, 13, 13) 1px;
+                border-right: solid rgb(167, 165, 165) 3px;
+                border-bottom: solid rgb(167, 165, 165) 3px;
+            }
+            .column_three span{
+                color: rgb(205, 209, 212);
+            }
+    .footer{
+        margin: 10px;
+    }            
+        .footer p span{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        .footer p{
+            margin-left: 400px;
+        }
+        .social{
+            margin-top: 10px;
+            padding: 2px;
+            margin-left: 330px;
+        }
+        .social .github, .linkedin, .twitter, .codepen{
+            width: 20px;
+            height: 20px;
+        }
+            
