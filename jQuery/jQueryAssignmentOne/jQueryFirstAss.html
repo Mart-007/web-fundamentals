@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery First Assignment</title>
+    <link rel="stylesheet" href="jQueryAssOne.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready( function(){
+            $(".click-function #click").click( function() {
+                $(".click-function p").hide("slow", function(){
+                    $(this).show(2000, function() {
+                        alert("That is Click function.");
+                    });
+                });
+            });
+
+            $(".hide-function #hide").click( function() {
+                $(".hide-function p").hide("slow", function() {
+                    alert("That is hide function.");
+                });
+            });
+            $(".show-function #show").click("slow", function() {
+                $(".show-function p").show("slow", function() {
+                        alert("That is show function.");
+                    });
+                });
+            
+        });
+    </script>
+ 
+</head>
+<body>
+    <h1>jQuery's Functions</h1>
+    <div class="container">
+        <div class="click-function">
+            <p>This is</p>
+            <p>Click</p>
+            <p>Function</p>
+            <input type="submit" id="click" value="Click here">
+            <a href="https://api.jquery.com/click/">See more..</a>
+        </div>
+        <div class="hide-function">
+            <p>This is</p>
+            <p>Hide</p>
+            <p>Function</p>
+            <input type="submit" id="hide" value="Click to hide">
+            <a href="https://api.jquery.com/hide/">See more..</a>
+        </div>
+        <div class="show-function">
+            <p>This is</p>
+            <p>Show</p>
+            <p>Function</p>
+            <input type="submit" id="show" value="Click to show">
+            <a href="https://api.jquery.com/show/">See more..</a>
+        </div>
+    </div>
+</body>
+</html>
