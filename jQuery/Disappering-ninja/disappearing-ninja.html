@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing Ninja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+         $(document).ready( function() {
+            $("img").click( function(){
+                $(this).fadeOut();
+            });
+
+            $("#restore").click( function(){
+                $("img").fadeIn("slow");
+            });
+         });
+    </script>
+
+
+<style>
+    .images{
+        margin: auto;
+        background-color: aquamarine;
+    }
+    img{
+        margin: 30px;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+    input{
+        margin-left: 800px;
+        padding: 20px;
+        width: 200px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="images">
+        <img src="./images/img1.png" alt="ninjaOne" height="300px" width="300px">
+        <img src="./images/img2.png" alt="ninjaTwo" height="300px" width="300px">
+        <img src="./images/img3.png" alt="ninjaThree" height="300px" width="300px">
+        <img src="./images/img4.png" alt="ninjaFour" height="300px" width="300px">
+        <img src="./images/img5.png" alt="ninjaFive" height="300px" width="300px">
+        <img src="./images/img6.png" alt="ninjaSix" height="300px" width="300px">
+        <img src="./images/img7.png" alt="ninjaSeven" height="300px" width="300px">
+        <img src="./images/img8.png" alt="ninjaEight" height="300px" width="300px">
+        <input type="submit" id="restore" value="restore">
+    </div>
+</body>
+</html>

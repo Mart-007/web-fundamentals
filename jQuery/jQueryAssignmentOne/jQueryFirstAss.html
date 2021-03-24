@@ -9,24 +9,63 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready( function(){
-            $(".click-function #click").click( function() {
+            $("#click").click( function() {
                 $(".click-function p").hide("slow", function(){
-                    $(this).show(2000, function() {
-                        alert("That is Click function.");
-                    });
+                    $(this).show()
                 });
             });
-
-            $(".hide-function #hide").click( function() {
-                $(".hide-function p").hide("slow", function() {
-                    alert("That is hide function.");
-                });
+            $("#hide").click( function() {
+                $(this).hide();
             });
             $(".show-function #show").click("slow", function() {
-                $(".show-function p").show("slow", function() {
-                        alert("That is show function.");
+                $(".show-function p").show("slow", function(){
+                    $(".show-function p").toggle("slow");
                     });
                 });
+            $("#toggle").click( function(){
+                $(".toggle-function p").toggle("slow");
+            });
+            $("#slideDown").click( function(){
+                $(".slideDown-function p").slideDown("slow");
+            });
+            $("#slideUp").click( function(){
+                $(".slideUp-function p").slideUp("slow");
+            });
+            $("#slideToggle").click( function(){
+                $(".slideToggle-function p").slideToggle("slow");
+            });
+            $("#fadeIn").click( function(){
+                $(".fadeIn-function p").hide("slow", function() {
+                    $(".fadeIn-function p").fadeIn("slow");
+                });
+            });
+            $("#fadeOut").click( function(){
+                $(".fadeOut-function p").fadeOut("slow")    
+            });
+            $("#addClass").click( function(){
+                $(".addClass-function p").last().addClass("selected");
+            });
+            $("#before").click( function(){
+                $(".before-function p").first().before("<i>before</i>");
+            });
+            $("#after").click( function(){
+                $(".after-function p").first().after("<b>after</b>");
+            });
+            $("#append").click( function(){
+                $(".append-function p").last().append("<b>in jQuery</b>");
+            });
+            $("#html").click( function(){
+                $(".html-function p").html("html");
+            });
+            $("#attr").click( function(){
+                $(".attr-function p").attr("p")
+            });
+            $("#val").click( function(){
+                $(".val-function p").last().val("jQuery function");
+            });
+            $("#text").click( function(){
+                $(".text-function p").last().text("jQuery function")
+            });
             
         });
     </script>
@@ -49,13 +88,111 @@
             <input type="submit" id="hide" value="Click to hide">
             <a href="https://api.jquery.com/hide/">See more..</a>
         </div>
-        <div class="show-function">
-            <p>This is</p>
-            <p>Show</p>
-            <p>Function</p>
-            <input type="submit" id="show" value="Click to show">
-            <a href="https://api.jquery.com/show/">See more..</a>
-        </div>
+    </div>
+    <div class="show-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="show" value="Click to show">
+        <a href="https://api.jquery.com/show/">See more..</a>
+    </div>
+    <div class="toggle-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="toggle" value="Click to toggle">
+        <a href="https://api.jquery.com/toggle/">See more..</a>
+    </div>
+    <div class="slideDown-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="slideDown" value="Click to slideDown">
+        <a href="https://api.jquery.com/slidedown/">See more..</a>
+    </div>
+    <div class="slideUp-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="slideUp" value="Click to slideUp">
+        <a href="https://api.jquery.com/show/">See more..</a>
+    </div>
+    <div class="slideToggle-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="slideToggle" value="Click to slideToggle">
+        <a href="https://api.jquery.com/show/">See more..</a>
+    </div>
+    <div class="fadeIn-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="fadeIn" value="Click to fadeIn">
+        <a href="https://api.jquery.com/show/">See more..</a>
+    </div>
+    <div class="fadeOut-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="fadeOut" value="Click to fadeOut">
+        <a href="https://api.jquery.com/show/">See more..</a>
+    </div>
+    <div class="addClass-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="addClass" value="Click to adClass">
+        <a href="https://api.jquery.com/addclass/">See more..</a>
+    </div>
+    <div class="before-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="before" value="Click to before">
+        <a href="https://api.jquery.com/before/">See more..</a>
+    </div>
+    <div class="after-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="after" value="Click to after">
+        <a href="https://api.jquery.com/after/">See more..</a>
+    </div>
+    <div class="append-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="append" value="Click to append">
+        <a href="https://api.jquery.com/append/">See more..</a>
+    </div>
+    <div class="html-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="html" value="Click to html">
+        <a href="https://api.jquery.com/html/">See more..</a>
+    </div>
+    <div class="attr-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="attr" value="Click to attr">
+        <a href="https://api.jquery.com/attr/">See more..</a>
+    </div>
+    <div class="val-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="val" value="Click to val">
+        <a href="https://api.jquery.com/show/">See more..</a>
+    </div>
+    <div class="text-function">
+        <p>This is</p>
+        <p>Show</p>
+        <p>Function</p>
+        <input type="submit" id="text" value="Click to text">
+        <a href="https://api.jquery.com/show/">See more..</a>
     </div>
 </body>
 </html>

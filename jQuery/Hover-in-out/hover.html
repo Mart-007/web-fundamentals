@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing Ninja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+         $(document).ready( function() {
+            $(".ninjaOne").hover( function(){
+                $(this).attr("src", "./images/img3.png"); }, function(){
+                    $(this).attr("src", "./images/img1.png"); 
+                });
+            
+            $(".ninjaTwo").hover( function(){
+                $(this).attr("src", "./images/img4.png"); }, function(){
+                    $(this).attr("src", "./images/img2.png"); 
+                });
+            
+            $(".ninjaThree").hover( function(){
+                $(this).attr("src", "./images/img2.png"); }, function(){
+                    $(this).attr("src", "./images/img3.png"); 
+                });
+            
+            $(".ninjaFour").hover( function(){
+                $(this).attr("src", "./images/img1.png"); }, function(){
+                    $(this).attr("src", "./images/img4.png"); 
+                });
+        });
+    </script>
+
+
+<style>
+    body{
+        background-color: rgb(34, 33, 33);
+    }
+    .images{
+        width: 1000px;
+        margin: auto;
+        background-color: aquamarine;
+    }
+    img{
+        margin: 30px;
+        margin-left: 120px;
+        cursor: pointer;
+    }
+    input{
+        margin-left: 800px;
+        padding: 20px;
+        width: 200px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="images">
+        <img src="./images/img1.png" class="ninjaOne" alt="ninjaOne" height="300px" width="300px">
+        <img src="./images/img2.png" class="ninjaTwo" alt="ninjaTwo" height="300px" width="300px">
+        <img src="./images/img3.png" class="ninjaThree" alt="ninjaThree" height="300px" width="300px">
+        <img src="./images/img4.png" class="ninjaFour" alt="ninjaFour" height="300px" width="300px">
+    </div>>
+</body>
+</html>

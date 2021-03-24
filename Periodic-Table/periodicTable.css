@@ -144,7 +144,9 @@ span{
                 background-color: rgb(132, 181, 255);
                 border: solid black 1px;
             }
-            .content-sub-left >.box_1r > span, .box_2r > span, .box_3r > span, .box_4r > span, .box_5r > span, .box_6r > span, .box_7r > span, .box_8r > span, .box_9r > span, .box_10r > span, .box_11r > span, .box_12r > span, .box_13r > span{
+            .content-sub-left >.box_1r > span, .box_2r > span, .box_3r > span, .box_4r > span, .box_5r > span, .box_6r > span, .box_7r > span, .box_8r > span, .box_9r > span, .box_10r > span, .box_11r > span, .box_12r > span, .box_13r > span,
+                               .box_14r > span, .box_14r > span, .box_15r > span, .box_16r > span, .box_17r > span, .box_18r > span, .box_19r > span, .box_20r > span, .box_21r > span, .box_22r > span, .box_23r > span, .box_24r > span, .box_25r > span,
+                               .box_26r > span, .box_27r > span, .box_28r > span, .box_29r > span, .box_30r > span, .box_31r > span, .box_32r > span, .box_33r > span, .box_13r > span{
                 font-size: 20px;
                 font-weight: bold;
                 display: block;
