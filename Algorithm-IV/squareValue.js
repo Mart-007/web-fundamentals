@@ -1,8 +1,6 @@
 function squareValue(x){
     for( var i=0; i<x.length; i++){
-       i = x * x;
-          
-        
+       x[i] = x[i] * x[i];
     }
     return x;
  }
@@ -11,3 +9,4 @@ function squareValue(x){
    
  y = squareValue([2,5,8]);
  console.log(y); // should log [4,25,64]
+

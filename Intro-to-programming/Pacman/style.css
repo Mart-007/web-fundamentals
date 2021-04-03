@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(36, 35, 35);
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+div.row div{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.brick{
+    background-color: rgb(69, 69, 252);
+}
+.coin{
+    background: url("./img/coin.gif") no-repeat center;
+    background-size: cover;
+}
+.pacman{
+    background: url("./img/pacman.gif") no-repeat center;
+    background-size: cover;
+}
