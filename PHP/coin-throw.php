@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    	<link type='text/css' rel='stylesheet' href='style.css'/>
-		<title>Coin Flips</title>
-	</head>
-	<body>
-	<p>We are going to flip a coin until we get three heads in a row!</p>
-	<?php    
-      $flipCount = 0;
-      do {
-          $flip = rand(0,1);
-          $flipCount ++;
-          if ($flip){
-              echo "<div class=\"coin\">H</div>";
-          }
-          else {
-              echo "<div class=\"coin\">T</div>";
-          }
-      } while ($flip);
-      $verb = "were";
-      $last = "flips";
-      if ($flipCount == 1) {
-          $verb = "was";
-          $last = "flip";
-      }
-      echo "<p>There {$verb} {$flipCount} {$last}!</p>";
-    
-	?>
-    </body>
-</html> 
+
+<?php  
+    $head = 0;
+    $tail = 0;
+    for($i = 1; $i<5000; $i++){
+        $flip = rand(0,1);
+        if($flip == 1){
+            $head++;
+            echo "<h5> Attempt #$i It's a head!... Got $head heads(s) so far and $tail tail(s) so far</h5>";
+        } 
+        else{
+            $tail++;
+            echo "<h5> Attempt #$i It's a tail!... Got $tail tail(s) so far and $head head(s) so far</h5>";
+        }
+    }
+?>
+  
