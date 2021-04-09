@@ -3,7 +3,7 @@
     // MANUAL: http://simplehtmldom.sourceforge.net/manual.htm
     
     require("simple_form_dom.php");
-    $html = file_get_html('http://www.cnn.com/');
+    $html = file_get_html('https://mail.yahoo.com/');
 
     // Find all images 
     foreach($html->find('img') as $element) 

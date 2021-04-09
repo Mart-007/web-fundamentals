@@ -217,12 +217,12 @@ class simple_html_dom_node
 		$string .= " HDOM_INNER_INFO: '";
 		if (isset($node->_[HDOM_INFO_INNER]))
 		{
-			$string .= $node->_[HDOM_INFO_INNER] . "'";
-		}
-		else
-		{
-			$string .= ' NULL ';
-		}
+			$string .= //$node->_[HDOM_INFO_INNER] . "'";
+		//}
+		//else
+		// {
+		// 	$string .= ' NULL ';
+		// }
 
 		$string .= " children: " . count($this->children);
 		$string .= " nodes: " . count($this->nodes);
@@ -556,8 +556,7 @@ class simple_html_dom_node
 
 	// seek for given conditions
 	// PaperG - added parameter to allow for case insensitive testing of the value of a selector.
-	protected function seek($selector, &$ret, $lowercase=false)
-	{
+	protected function seek($selector, &$ret, $lowercase=false){
 		global $debug_object;
 		if (is_object($debug_object)) { $debug_object->debug_log_entry(1); }
 
