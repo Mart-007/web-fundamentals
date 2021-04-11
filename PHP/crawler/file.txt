@@ -1,0 +1,23 @@
+[
+  {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@gmail.com",
+      "address": "sh 123 liko st. meranda quezon"
+  },
+  {
+      "id": "2",
+      "firstName": "Mary",
+      "lastName": "Peterson",
+      "email": "mary@gmail.com",
+      "address": "sh 123 liko st. meranda quezon"
+  },
+  {
+      "id": "3",
+      "firstName": "George",
+      "lastName": "Hansen",
+      "email": "george@gmail.com",
+      "address": "sh 123 liko st. meranda quezon"
+  }
+]

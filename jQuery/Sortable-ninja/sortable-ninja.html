@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Ninja</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
+    <script>
+        $(document).ready( function(){
+            $( "#images" ).sortable();
+            $( "#images" ).disableSelection();
+        })
+    </script>
+     <style>
+         body{
+             background-color: antiquewhite;
+         }
+         #images{
+             margin-top: 200px;
+             margin-left: 850px;
+             width: 200px;
+             display: inline-block;
+         }
+    </style>
+</head>
+<body>
+   <div id="images">
+       <img src="./images/ninja2.png" alt="ninja2">
+       <img src="./images/ninja1.png" alt="ninja1">
+       <img src="./images/ninja0.png" alt="ninja0">
+       <img src="./images/ninja4.png" alt="ninja4">
+       <img src="./images/ninja3.png" alt="ninja3">
+   </div> 
+</body>
+</html>

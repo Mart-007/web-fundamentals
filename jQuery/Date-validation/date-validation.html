@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Validation</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready( function (){
+            $( "#fromDate" ).datepicker();
+            $( "#toDate" ).datepicker();
+            $("#submit").click( function(){
+              var str = $("#name").val();
+              var FDate = $("#fromDate").val();
+              var TDate = $("#toDate").val();
+              alert("Thanks " + str + "! Your Cruise leaves on "   + FDate +   " and returns on "   + TDate)
+            })
+        });
+    </script>
+
+
+    <style>
+        body{
+            height: 1000px;
+            background-image: linear-gradient(rgb(77, 245, 231), rgb(152, 152, 250));
+        }
+        #Form{
+            width: 230px;
+            margin: 20px;
+            margin-left: 700px;
+            margin-top: 300px;
+            padding: 100px;
+            display: block;
+            border: rgb(152, 152, 250) 5px;
+            border-radius: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            position: absolute;
+            background-image: linear-gradient(rgb(174, 174, 240), rgb(151, 248, 151));
+        }
+            input[type=text]{
+                margin-top: 30px;
+                margin-left: 30px;
+                padding: 6px; 
+                border: rgb(152, 152, 250) 5px;
+                font-size: 15px bold;
+                color: rgb(68, 68, 70);
+                border-radius: 3px;
+            }
+            h3{
+                padding-bottom: 10px;
+                margin-left: 750px;
+                margin-top: 350px;
+                position: absolute;
+                z-index: 2;
+                border-bottom: solid rgb(168, 168, 207) 2px;
+                color: rgb(110, 110, 109);
+            }
+            #submit{
+                margin-top: 30px;
+                margin-left: 30px;
+                padding: 6px;
+                background-color: rgb(190, 248, 212);
+                color: rgb(73, 73, 73);
+                border-radius: 5px;
+                border-color: rgb(190, 248, 212);
+            }
+    </style>
+</head>
+<body>
+    <h3>Welcome to the Coding dojo plan-a-cruise</h3>
+    <form id="Form">
+        <label for="fromDate"></label>
+        <input type="text" id="fromDate" placeholder="From:">
+        <label for="toDate"></label>
+        <input type="text" id="toDate" placeholder="To:">
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name:" required>
+        <input type="submit" id="submit" value="Check dates!" required>
+    </form>
+</body>
+</html>

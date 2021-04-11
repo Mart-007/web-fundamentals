@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" x-content-type-option="ie=edge"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>JSON Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script>
+        fetch('file.json')
+           .then(function(response){
+            //test here if there are data
+               return response.json();
+           })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                logs = myObj.logs[0]
+                //test here also if what is the return div
+                div.innerHTML =  data[i].id + ' <br>' + data[i].firstName +'<br> ' + data[i].lastName +  '<br> ' + data[i].email +  '<br> ' + data[i].address; /* + '<br>' + data[i].logs; */
+               /*this is test*/ console.log(data[i].firstName) 
+                mainContainer.appendChild(div);
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <!-- <div class="row">
+            <div class="col-4"> -->
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Json file List</div>
+                <div class="card-body" id="myData">
+            <!-- </div>
+        </div> -->
+    </div>
+</div>
+</div>
+</div>
+ </div>
+</body>
+</html>

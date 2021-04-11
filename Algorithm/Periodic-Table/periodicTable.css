@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-numbers{
+    margin: 10px;
+}
+    .header-numbers span{
+        position: absolute;
+        color: red;
+    }
+    .header-numbers ol{
+        margin-top: 10px;
+        margin-left: 50px;
+        color: red;
+        position: absolute;
+        
+    }
+    .header-numbers ol > li{
+        padding: 25px;
+        display: inline;
+        list-style-type: none;
+        color: red;
+    }
+.content-left{
+    width: 195px;
+    margin-top: 50px;
+    display: inline-block;
+}
+    .content-left ol{
+        margin-left: 5px;
+        position: absolute;
+    }
+    .content-left ol > li{
+        padding: 22px;
+        list-style-type: none;
+        color: red;
+    }
+    .content-sub-left {
+        margin-top: 5px;
+        margin-left: 55px;
+        width: 150px;
+        display: inline-block;
+    }
+    .content-sub-left p {
+        font-size: 12px;
+        padding: 2px;
+        display: inline-block;
+    }
+    .content-sub-left > .box_1{
+        width: 55px;
+        text-align: center;
+        display: block;
+        background-color: rgb(132, 181, 255);
+        border: solid black 1px;
+    }
+    .content-sub-left > .box_1 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8, .box_9, .box_10, .box_11, .box_12, .box_13{
+        margin-top: 2px;
+        width: 55px;
+        text-align: center;
+        display: inline-block;
+        background-color: rgb(132, 181, 255);
+        border: solid black 1px;
+    }
+    .content-sub-left > .box_2 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_3 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_4 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_5 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_6 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_7 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_8 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_9 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_10 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_11 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_12 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-sub-left > .box_13 > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+   
+    
+
+.content-middle{
+    margin-top: 229px;
+    display: inline-block;
+    width: 651px;
+    position: absolute;
+}
+    .content-middle > .box_One > span{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    .content-middle p {
+        font-size: 12px;
+        padding: 2px;
+        display: inline-block;
+    }
+    .content-middle > .box_One, .box_Two, .box_Three, .box_Four, .box_Five, .box_Six, .box_Seven, .box_Eight, .box_Nine, .box_Ten, .box_Eleven, .box_Twelve, .box_Thirteen, .box_Fourteen,
+                      .box_Fifteen, .box_Sixteen, .box_Seventeen, .box_Eighteen, .box_Nineteen, .box_Twenty, .box_21, .box_22, .box_23, .box_24, .box_25, .box_26, .box_27, .box_28, .box_29, .box_30,
+                      .box_31, .box_32, .box_33, .box_34, .box_35, .box_36, .box_37, .box_38, .box_39, .box_40{
+        width: 55px;
+        margin-top: 2px;
+        text-align: center;
+        display: inline-block;
+        background-color: rgb(247, 213, 104);
+        border: solid black 1px;
+    }
+    .content-middle > .box_One > span , .box_Two > span, .box_Three > span, .box_Four > span, .box_Five > span, .box_Six > span, .box_Seven > span, .box_Eight > span, .box_Nine > span, .box_Ten > span
+                    , .box_Eleven > span, .box_Twelve > span, .box_Thirteen > span, .box_Fourteen > span, .box_Fifteen > span, .box_Sixteen > span, .box_Seventeen > span, .box_Eighteen > span, .box_Nineteen > span, .box_Twenty > span
+                    , .box_21 > span, .box_22 > span, .box_23 > span, .box_24 > span, .box_25 > span, .box_26 > span, .box_27 > span, .box_28 > span, .box_29 > span, .box_30 > span, .box_31 > span, .box_32 > span
+                    , .box_32 > span, .box_33 > span, .box_34 > span, .box_35 > span, .box_36 > span, .box_37 > span, .box_38 > span, .box_39 > span, .box_40 > span {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    
+    
+
+.content-right{
+    border: solid black 1px;
+}
+.footer{
+    border: solid black 1px;
+}

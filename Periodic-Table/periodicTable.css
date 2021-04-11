@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: auto;
+    width: 80em;
+    background-color: antiquewhite;
+}
+span{
+    color: rgb(20, 109, 243)
+}
+    .header-numbers{
+        margin: 10px;
+    }
+        .header-numbers span{
+            position: absolute;
+            color: red;
+        }
+        .header-numbers ol{
+            margin-top: 10px;
+            margin-left: 50px;
+            color: red;
+            position: absolute;
+            
+        }
+        .header-numbers ol > li{
+            padding: 25px;
+            display: inline;
+            list-style-type: none;
+            color: red;
+        }
+    .content-left{
+        width: 195px;
+        margin-top: 50px;
+        display: inline-block;
+    }
+        .content-left ol{
+            margin-left: 5px;
+            position: absolute;
+        }
+        .content-left ol > li{
+            padding: 22px;
+            list-style-type: none;
+            color: red;
+        }
+        .content-sub-left {
+            margin-top: 5px;
+            margin-left: 55px;
+            width: 150px;
+            display: inline-block;
+        }
+        .content-sub-left p {
+            font-size: 12px;
+            padding: 2px;
+            display: inline-block;
+        }
+        .content-sub-left > .box_1{
+            width: 55px;
+            text-align: center;
+            display: block;
+            background-color: rgb(132, 181, 255);
+            border: solid black 1px;
+        }
+        .content-sub-left > .box_1 > span{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+        .content-sub-left > .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8, .box_9, .box_10, .box_11, .box_12, .box_13{
+            margin-top: 2px;
+            width: 55px;
+            text-align: center;
+            display: inline-block;
+            background-color: rgb(132, 181, 255);
+            border: solid black 1px;
+        }
+        .content-sub-left > .box_2 > span, .box_3 > span, .box_4 > span, .box_5 > span, .box_6 > span, .box_7 > span, .box_8 > span, .box_9 > span, .box_10 > span, .box_11 > span, .box_12 > span, .box_13 > span{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+    
+    .content-middle{
+        margin-top: 230px;
+        display: inline-block;
+        width: 651px;
+        position: absolute;
+    }
+        .content-middle > .box_One > span{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+        .content-middle p {
+            font-size: 12px;
+            padding: 2px;
+            display: inline-block;
+        }
+        .content-middle > .box_One, .box_Two, .box_Three, .box_Four, .box_Five, .box_Six, .box_Seven, .box_Eight, .box_Nine, .box_Ten, .box_Eleven, .box_Twelve, .box_Thirteen, .box_Fourteen,
+                        .box_Fifteen, .box_Sixteen, .box_Seventeen, .box_Eighteen, .box_Nineteen, .box_Twenty, .box_21, .box_22, .box_23, .box_24, .box_25, .box_26, .box_27, .box_28, .box_29, .box_30,
+                        .box_31, .box_32, .box_33, .box_34, .box_35, .box_36, .box_37, .box_38, .box_39, .box_40{
+            width: 55px;
+            margin-top: 2px;
+            text-align: center;
+            display: inline-block;
+            background-color: rgb(247, 243, 46);
+            border: solid black 1px;
+        }
+        .content-middle > .box_One > span , .box_Two > span, .box_Three > span, .box_Four > span, .box_Five > span, .box_Six > span, .box_Seven > span, .box_Eight > span, .box_Nine > span, .box_Ten > span
+                        , .box_Eleven > span, .box_Twelve > span, .box_Thirteen > span, .box_Fourteen > span, .box_Fifteen > span, .box_Sixteen > span, .box_Seventeen > span, .box_Eighteen > span, .box_Nineteen > span, .box_Twenty > span
+                        , .box_21 > span, .box_22 > span, .box_23 > span, .box_24 > span, .box_25 > span, .box_26 > span, .box_27 > span, .box_28 > span, .box_29 > span, .box_30 > span, .box_31 > span, .box_32 > span
+                        , .box_32 > span, .box_33 > span, .box_34 > span, .box_35 > span, .box_36 > span, .box_37 > span, .box_38 > span, .box_39 > span, .box_40 > span {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+    .content-right{
+        margin-left: 42em;
+        margin-top: 50px;
+        width: 400px;
+        display: inline-block;
+        border: solid black 1px;
+        position: absolute;
+    }
+        .content-right p {
+            font-size: 12px;
+            padding: 2px;
+            display: inline-block;
+        }
+            .content-right .box_1r{
+                margin-left: 327px;
+                width: 55px;
+                display: block;
+                background-color: rgb(132, 181, 255);
+                border: solid black 1px;
+            } 
+            .content-right > .box_2r, .box_3r, .box_4r, .box_5r, .box_6r, .box_7r, .box_8r, .box_9r, .box_10r, .box_11r, .box_12r, .box_13r{
+                margin-top: 2px;
+                width: 55px;
+                text-align: center;
+                display: inline-block;
+                background-color: rgb(132, 181, 255);
+                border: solid black 1px;
+            }
+            .content-sub-left >.box_1r > span, .box_2r > span, .box_3r > span, .box_4r > span, .box_5r > span, .box_6r > span, .box_7r > span, .box_8r > span, .box_9r > span, .box_10r > span, .box_11r > span, .box_12r > span, .box_13r > span,
+                               .box_14r > span, .box_14r > span, .box_15r > span, .box_16r > span, .box_17r > span, .box_18r > span, .box_19r > span, .box_20r > span, .box_21r > span, .box_22r > span, .box_23r > span, .box_24r > span, .box_25r > span,
+                               .box_26r > span, .box_27r > span, .box_28r > span, .box_29r > span, .box_30r > span, .box_31r > span, .box_32r > span, .box_33r > span, .box_13r > span{
+                font-size: 20px;
+                font-weight: bold;
+                display: block;
+            }
+    
+    .footer{
+        border: solid black 1px;
+    }
