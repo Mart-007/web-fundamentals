@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<!-- This is initial test -->
+<?php 
+session_start();
+
+$_SESSION['randNum'] = isset($_SESSION['randNum']) ? $_SESSION['randNum'] : rand(1, 100);
+$_SESSION['guesses'] = isset($_SESSION['guesses']) ? $_SESSION['randNum'] : 0;
+
+?>
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,13 +48,7 @@
         <h1>Welcome to the Great Number Game!</h1>
         <p>I am thinking of a number between 1 and 100</p>
         <span>Take a guess!</span>
-        <?php 
-            $number = rand(1, 100);
-            if (isset($_SESSION["number"]) == $number){
-                "<h1> your great mafaka!";
-            }
-        ?>
-        <form action="process.php" method="$_SESSION">
+        <form action="process.php" method="post">
             <input type="text" name="number" class="text">
             <input type="submit" value="Submit" class="submit">
         </form>
