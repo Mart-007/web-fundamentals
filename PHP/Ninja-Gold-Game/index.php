@@ -113,9 +113,7 @@
 
                 foreach ($_SESSION['action'] as $action){
                     echo $action;
-                }
-                
-               
+                }              
             ?>
         </div>
 
