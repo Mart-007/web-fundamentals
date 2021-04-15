@@ -5,7 +5,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '1234'); //set DB_PASS as 'root' if you're using mac
-define('DB_DATABASE', 'people'); //make sure to set your database
+define('DB_DATABASE', 'records'); //make sure to set your database
 //connect to database host
 $connection =  mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE);
 /*-------------------------END OF CONNECTION PROCESS!-*/
@@ -15,9 +15,9 @@ if($connection->connect_errno)
 {
     die("Failed to connect to MySQL: (" . $connection->connect_errno . ") " . $connection->connect_error);
 }
-$connection->query("SELECT * FROM people");
+$connection->query("SELECT * FROM records");
 
-$users = $connection->query("SELECT * FROM users");
+$users = $connection->query("SELECT * FROM records");
 foreach($users as $user){
 var_dump($users);
 }

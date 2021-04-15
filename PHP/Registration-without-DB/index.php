@@ -56,7 +56,7 @@
 </style>
 <body>
     <form action="process.php" method="post">
-        <input type="text" name="fname" placeholder="First name"> <?= $msgs ?> 
+        <input type="text" name="fname" placeholder="First name"> 
         <input type="text" name="lname" placeholder="Last name">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="password">

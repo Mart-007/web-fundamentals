@@ -1,3 +1,15 @@
+function myFunction(str){
+    var n = str.length;
+    if( n > 10){
+   console.log("error");
+       } else{
+    console.log(str);
+    }
+   }
+    var results = myFunction("sdadlaksjus");
+     console.log(results)
+
+     
 //1. Create a function that prints/logs all the integers from 1 to 20.
 function print1to20(){
     for(var i = 1; i < 21; i++){
