@@ -1,10 +1,9 @@
-<?php
-    require('success.php');
-    $query = "INSERT INTO records (email) VALUES ('martbords07@gmail.com')";
-    $email = run_mysql_query($query);
-    var_dump($email);
 
+ <?php
+    require("db-connection.php");
+    session_start();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,12 +30,20 @@
     </style>
 </head>
 <body>
-    <form action="sucess.php" method="post">
-        <p>Email address entered:</p>
-        <input type="hidden" name="input">
+<?php  
+         if(isset($_SESSION['message']) and ($_SESSION['valid'] == 'no'))
+            {
+                echo "<div class='error'>" . $_SESSION['message'] . "</div>";
+                unset($_SESSION['message']);
+        }
+    ?>
+    <p>Email address entered:</p>
+    <form action="sucess.php" method="post">  
+        <input type="text" name="email">
+        <input type="submit" name="submit">
     </form>
     <?php
-        echo "<p>$email </p>";
+        echo "<p>$email</p>";
     ?>
 </body>
 </html>
