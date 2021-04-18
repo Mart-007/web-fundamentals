@@ -1,0 +1,62 @@
+<!--Submitted by: Reymart Jabonete Bordo-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Num to Word</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+      <div class="container"> <h1>Number to Word Converter</h1> <!--Section-->
+        <form id="form" class="card">  <!-- The form card-->
+            <b>Converted:</b> <!--Headline-->
+            <span id="str" class="number1"></span> <!--Output-->
+            <input id="int" type="text" class="number" />    <!--Input-->
+        </form>
+      </div>
+   
+<!--Javascript code-->
+   <script type="text/javascript">
+const x = ['','One ','Two ','Three ','Four ', 'Five ','Six ','Seven ','Eight ','Nine ','Ten ','Eleven ','Twelve ','Thirteen ','Fourteen ','Fifteen ','Sixteen ','Seventeen ','Eighteen ','Nineteen ']; //First variable
+const y = ['', '', 'Twenty','Thirty','Forty','Fifty', 'Sixty','Seventy','Eighty','Ninety']; //Second Variable
+
+function inStr (int) { //Start the conditional functions
+    if ((int = int.toString()).length > 9) return 'overflow'; //set the length of the input
+    i = ('000000000' + int).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/); //extracts the characters from the string
+    if (!i) return; var str = '';
+   
+     if (i[1] !=0){
+     str+= (x[Number(i[1])] || y[i[1][0]] + ' '   + x[i[1][1]]) + 'million '; //Set the first condition to get the array elements
+        } else {
+        str+= '';
+     }
+     if (i[2] != 0){
+        str+=  (x[Number(i[2])] || y[i[2][0]] + ' ' + x[i[2][1]]) + 'hundred thousand '; //Set the second condition to get the array elements
+        } else{
+        str+= '';
+     }
+     if (i[3] != 0){
+        str += (x[Number(i[3])] || y[i[3][0]] + ' ' + x[i[3][1]]) + 'thousand '; //Set the third condition to get the array elements
+        } else {
+        str+= '';   
+     }
+     if (i[4] != 0){
+        str +=  (x[Number(i[4])] || y[i[4][0]] + ' ' + x[i[4][1]]) + 'hundred ' ; //Set the fourth condition to get the array elements
+     } else {
+        str+= '';  
+     }
+    str += (i[5] != 0) ? ((str != '') ? 'and ' : '') + (x[Number(i[5])] || y[i[5][0]] + ' ' + x[i[5][1]]) + ' ' : ''; 
+    return str;
+}
+ 
+document.getElementById('int').onkeyup = function () { //returns the element
+document.getElementById('str').innerHTML = inStr(document.getElementById('int').value);
+};
+
+      </script>
+   </body>
+</html>

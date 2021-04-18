@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Num to Word</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="text/javascript" href="app.js">
+</head>
+<body>
+    
+    
+
+    <div class="container"> <h1>Number to Word Converter</h1>
+        <form id="form" class="card">
+            <b>Converted:</b>
+            <span id="str" class="number1"></span>
+
+            <input id="digit" type="text" class="number" />
+             <!--<input type="text" name="num" id="int" class="number"/>-->
+            <!--<button type="button" id="myBtn" class="btn">Convert</button>-->
+           
+            <!--<input id="converted" type="text" class="number"/>-->
+        </form>
+        </div>
+   
+<!--Javascript code-->
+        <script type="text/javascript">
+            const x = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+            const y = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
+
+function inStr (int) {
+    if ((int = int.toString()).length > 9) return 'overflow';
+    i = ('000000000' + int).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+    if (!i) return; var str = '';
+   
+     if (i[1] !=0){
+     str+= (x[Number(i[1])] || y[i[1][0]] + ' '   + x[i[1][1]]) + 'million ';
+        } else {
+        str+= '';
+     }
+     if (i[2] != 0){
+        str+=  (x[Number(i[2])] || y[i[2][0]] + ' ' + x[i[2][1]]) + 'hundred thousand ';
+        } else{
+        str+= '';
+     }
+     if (i[3] != 0){
+        str += (x[Number(i[3])] || y[i[3][0]] + ' ' + x[i[3][1]]) + 'thousand ';
+        } else {
+        str+= '';   
+     }
+     if (i[4] != 0){
+        str +=  (x[Number(i[4])] || y[i[4][0]] + ' ' + x[i[4][1]]) + 'hundred ' ;
+     } else {
+        str+= '';  
+     }
+   // str += (i[1] != 0) ? (x[Number(i[1])] || y[i[1][0]] + ' '   + x[i[1][1]]) + 'million ' : '';
+    //str += (i[2] != 0) ? (x[Number(i[2])] || y[i[2][0]] + ' ' + x[i[2][1]]) + 'hundred thousand ' : '';
+   // str += (i[3] != 0) ? (x[Number(i[3])] || y[i[3][0]] + ' ' + x[i[3][1]]) + 'thousand ' : '';
+   // str += (i[4] != 0) ? (x[Number(i[4])] || y[i[4][0]] + ' ' + x[i[4][1]]) + 'hundred ' : '';
+    str += (i[5] != 0) ? ((str != '') ? 'and ' : '') + (x[Number(i[5])] || y[i[5][0]] + ' ' + x[i[5][1]]) + ' ' : '';
+    return str;
+}
+
+document.getElementById('digit').onkeyup = function () {
+document.getElementById('str').innerHTML = inStr(document.getElementById('digit').value);
+};
+
+
+
+        </script>
+</body>
+</html>

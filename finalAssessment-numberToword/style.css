@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: darkgoldenrod;
+    padding: 100px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+}
+h1 {
+    margin-left: 10%;
+}
+
+.card {
+        margin-top: 10%;
+        margin-left: 10%;
+     }
+
+.number {
+        padding: 10px; 
+        backdrop-filter: blur(10px); 
+        background-color: white;
+        width: 353px;
+        margin-top: 5px;
+       
+        
+    }
+span {
+       padding: 10px;  
+       width: 353px;
+       margin-bottom: 20px;
+       
+   }
+
+ 
+    

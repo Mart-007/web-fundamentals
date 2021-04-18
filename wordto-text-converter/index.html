@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numTOwords</title>
+    <style>
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   .container{
+       background-color: darkgoldenrod;
+       padding: 100px;
+       width: 50%;
+       margin: auto;
+       margin-top: 10%;
+   }
+    h1 {
+        margin-left: 10%;
+    }
+   h3 { 
+			color: white; 
+			height: 250px; 
+			display: flex; 
+			justify-content: center; 
+			align-items: center; 
+		} 
+		
+        .card {
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+		.btn { 
+			top: 50%; 
+			box-shadow: 0 0 5px 0; 
+			background: inherit; 
+			backdrop-filter: blur(10px); 
+			margin: 20px; 
+			text-align: center; 
+            padding: 10px;
+            width: 170px;
+            background-color: white;
+            margin-left: 27%;
+		}
+        .btn:hover{
+            color: azure;
+            background-color: rgb(63, 149, 158);
+            cursor: pointer;
+        }
+        .number {
+            padding: 10px;
+            box-shadow: 0 0 5px 0; 
+			background: inherit; 
+			backdrop-filter: blur(10px); 
+            background-color: white;
+            width: 353px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <h1>Number to Word Converter</h1>
+    <form id="form" class="card">
+        <input type="text" name="num" id="int" class="number">
+        <input type="submit" value="convert" class="btn">
+    </form>
+    </div>
+
+    <h3 id="converted"></h3>
+
+    <script type="text/javascript">
+      pad = document.getElementById("form");
+      pad.onsubmit=function() {
+          var int = document.getElementById("int").value;
+          var view = document.getElementById("converted");
+          var res=0;
+          while(int !=0){
+              res=(res*10)+(int%10);
+              int=parseInt(int/10); 
+          }
+          while(res !=0){
+              switch(res%10){
+                case 0:{document.write(" zero ");};   break;
+                case 1:{document.write(" one ");};    break;
+                 case 2:{document.write(" two ");};   break;
+                 case 3:{document.write(" three ");}; break;
+                 case 4:{document.write(" four ");};  break;
+                 case 5:{document.write(" five ");};  break;
+                 case 6:{document.write(" six ");};   break;
+                 case 7:{document.write(" seven ");}; break;
+                 case 8:{document.write(" eight ");}; break;
+                 case 9:{document.write(" nine ");};  break;
+                 default:{document.write("not a value");};
+
+              }
+              res=parseInt(res/10); 
+          }
+
+      }   
+    
+    </script>
+</body>
+</html>
