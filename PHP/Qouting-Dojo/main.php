@@ -23,7 +23,6 @@
     <form action="process.php" memthod="post">
         <input type="hidden" name="action" value="return">
         <input type="submit" value="Go Back">
-    </form>
-    
+    </form>    
 </body>
 </html>

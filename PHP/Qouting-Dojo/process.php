@@ -38,7 +38,7 @@
     if(isset($_POST['action']) && $_POST['action']=="skip"){
         header('Locatio: main.php');
     }
-    if(isset($_POST['action']) && $_POST['action'] == "goback"){
+    if(isset($_POST['action']) && $_POST['action'] == "return"){
         header('Location: index.php');
         die();
     }
