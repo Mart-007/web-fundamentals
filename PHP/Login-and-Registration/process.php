@@ -35,7 +35,7 @@
         }
         else
         {
-            $query = "INSERT INTO users.users_info (first_name, last_name, email, password, created_at, updated_at)
+            $query = "INSERT INTO users_info (first_name, last_name, email, password, created_at, updated_at)
                     VALUES ('{$post['f_name']}', '{$post['l_name']}', '{$post['email']}', '{$post['password']}', NOW(), NOW())";
             run_mysql_query($query);
             $_SESSION['message'] = "User succesfully created!";
@@ -48,8 +48,8 @@
    
     function user_login($post)
     {
-        $query = "SELECT * FROM users.users_info WHERE users.password = '{$post['password']}'
-                  AND users.email = '{$post['email']}'";
+        $query = "SELECT * FROM users_info WHERE users_info.password = '{$post['password']}'
+                  AND users_info.email = '{$post['email']}'";
         $user = fetch_all($query);
         if(count($user) > 0)
         {

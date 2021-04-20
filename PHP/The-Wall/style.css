@@ -145,10 +145,14 @@ input[type=password]:focus {
 .login_btn:hover{
     cursor: pointer;
 }
-p{
+.error{
+    margin-left: 20%;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: bold;
-    color: red;
+    color: rgb(206, 7, 7);
     padding: 20px;
     background-color: #6666ff;
 }

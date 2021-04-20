@@ -1,4 +1,8 @@
+<?
+    require('db-connection.php');
+    session_start();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +13,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php
+            if(isset($_SESSION['errors'])){
+                foreach($_SESSION['errors'] as $error){
+                    echo "<p class=error>  {$error}  </p>";
+                    unset($_SESSION['errors']);
+                }
+            }
+            if(isset($_SESSION['message'])){
+                echo "<p class=success> {$_SESSION['message']} </p>";
+                unset($_SESSION['message']);
+            }
+        ?>
     <header>The Wall</header>
     <div class="container">
         <h1 class="reg">Register</h1>
         <form action="process.php" method="post" class="register">
             <input type="hidden" name="action" value="register">
-            First name:<input type="text" name="f_name" placeholder="First name" class="fname"><br>
-            Last name:<input type="text" name="l_name" placeholder="Last name" class="lname"><br>
+            First name:<input type="text" name="fname" placeholder="First name" class="fname"><br>
+            Last name:<input type="text" name="lname" placeholder="Last name" class="lname"><br>
             Email:<input type="text" name="email" placeholder="Email" class="email"><br>
             Password:<input type="password" name="password" placeholder="Password" class="reg_password"><br>
-            Confirm password: <input type="password" name="c_password" placeholder="Confirm password" class="cpassword"><br>
+            Confirm password: <input type="password" name="cpassword" placeholder="Confirm password" class="cpassword"><br>
             <input type="submit" class="submit" value="Register">
         </form>
                 <hr></hr>
