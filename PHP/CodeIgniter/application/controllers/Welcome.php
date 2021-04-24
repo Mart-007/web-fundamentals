@@ -10,6 +10,12 @@ class Welcome extends CI_Controller {
 	public function hello(){
 		echo "This is hello routes";
 	}
+	public function hi(){
+		echo "hi";
+	}
+	public function say_anything($say){
+		echo strtoupper($say);
+	}
 
 }
 	/**

@@ -13,7 +13,7 @@
         </testsuite>
 
         <testsuite name="MainTest">
-            <directory suffix="Test.php">Test/MainTest</directory>
+            <directory suffix="Test.php">tests/MainTest</directory>
             <exclude>tests/end-to-end/_files</exclude>
         </testsuite>
     </testsuites>
