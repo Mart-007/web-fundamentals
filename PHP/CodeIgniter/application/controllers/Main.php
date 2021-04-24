@@ -5,7 +5,7 @@ class Main extends CI_Controller {
 	
 	public function index()
 	{
-		echo "I am the main class!";
+		echo "This is Main class";
 	}
 	public function hello(){
 		echo "hello";
@@ -18,6 +18,20 @@ class Main extends CI_Controller {
 	}
     public function danger(){
         redirect('/main');
+    }
+    public function world(){
+        $this->load->view('main/world');
+    }
+    public function ninja($num){
+        if($num !== null){
+            for($i=0; $i<$num; $i++){
+                $this->load->view('main/ninja');
+            }
+        } else {
+            for($i=0; $i<5; $i++){
+                $this->load->view('main/ninja');
+            }
+        }
     }
 
 }
