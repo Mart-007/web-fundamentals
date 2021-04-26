@@ -60,3 +60,6 @@ $route['users'] = 'users/index';
 $route['add_course'] = '/course/add_course';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+//Exam routes
+$routes['getUsers/(:any)'] = 'GetUsers/';
