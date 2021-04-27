@@ -23,16 +23,15 @@ class Main extends CI_Controller {
         $this->load->view('main/world');
     }
     public function ninja($num){
-        if($num !== null){
+        if($num != null){
             for($i=0; $i<$num; $i++){
                 $this->load->view('main/ninja');
             }
         } else {
-            for($i=0; $i<5; $i++){
+            for($i=0; $i<=5; $i++){
                 $this->load->view('main/ninja');
             }
         }
     }
-
 }
 ?>

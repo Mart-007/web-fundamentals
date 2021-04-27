@@ -55,9 +55,16 @@ $route['say/hi'] = '/welcome/say/hi';
 $route['sa_anything/(:any)'] = '/welcome/say_anything';
 $route['world'] = '/main/world';
 $route['ninja'] = '/main/ninja';
-$route['ninjas/(:any)'] = 'main/ninjas/';
+$route['ninjas/(:any)'] = 'main/ninjas/$1';
 $route['users'] = 'users/index';
+$route['new'] = 'users/new';
+$route['create'] = '/';
+$route['counter'] = 'users/count';
 $route['add_course'] = '/course/add_course';
+
+$route['say/(:any)'] = 'users/say/';
+$route['say/(:any)/(:any)'] = 'users/say/';
+$route['mrep'] = 'users/mrep';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
