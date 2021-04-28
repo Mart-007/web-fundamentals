@@ -30,35 +30,42 @@
                 }
             });
         }
-        //baseURL variable
-        // var baseURL = "<?php base_url();?>";
-        // $(document).ready(function(){
-        //     //country change
-        //     $('#country').change(function(){
-        //         var country = $(this).val();
+        // baseURL variable
+        var baseURL = "<?php base_url();?>";
+        $(document).ready(function(){
+            //country change
+            $('#country').change(function(){
+                var country = $(this).val();
 
-        //         //AJAX request
-        //         $.ajax({
-        //             url:'<?=base_url()?>/GetUsers/get_country',
-        //             method: 'post',
-        //             data: {country: country},
-        //             dataType: 'json',
-        //             success: function(response){
+                //AJAX request
+                $.ajax({
+                    url:'<?=base_url()?>/GetUsers/get_country',
+                    method: 'post',
+                    data: {country: country},
+                    dataType: 'json',
+                    success: function(response){
                         
-        //                 //Add options
-        //                 $.each(response, function(index, data){
-        //                     $('#country').append('<option value="'+data['id']+'"></option>')
-        //                 });
-        //             }
-        //         });
-        //     });
-        // })
+                        //Add options
+                        $.each(response, function(index, data){
+                            $('#country').append('<option value="'+data['id']+'"></option>')
+                        });
+                    }
+                });
+            });
+        })
     </script>
     <style>
+        .container{
+            margin-left: 600px;
+            width: 700px;
+            background-color: #85e0e0;
+        }
+        body{
+            background-color: #47d1d1;
+        }
         .header{
-            margin-left: 400px;
-            display: inline-block;
-           
+            margin-left: 100px;
+            display: inline-block;         
         }
         h3{
             margin-right: 100px;
@@ -71,18 +78,28 @@
         }
         table{
             margin-top: 50px;
-            margin-left: 400px;
+            margin-left: 190px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
         }
         .th{
-            padding: 30px;
+            padding: 10px;
             font-family: arial;
             font-weight: bold;
             }
         td{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+            border: 1px solid #dddddd;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+            /* td{
             border: 1px solid black;
             margin-right: 50px;
             padding: 10px;
-        }
+        } */
         .btn{
             background-color:#00e673;
             border: none;
@@ -92,9 +109,9 @@
             cursor: pointer;
             display: inline-block;
             }
-        .gray{
+        /* .gray{
             background-color: #66ccff;
-        }
+        } */
   </style>
 </head>
 <body>
