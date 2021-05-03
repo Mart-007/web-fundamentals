@@ -57,6 +57,16 @@
         .red{
             color: red;
         }
+        .btn{
+            margin: 20px;
+            margin-left: 40px;
+        }
+        .count{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -68,7 +78,7 @@
             <div>
                 <h3>Farm</h3>
                 <p>(earns 10-20 golds)</p>
-                <form action="process.php" method="post">
+                <form action="ninja/farm" method="post">
                     <input type="hidden" name="action" value="farm">
                     <input type="submit" value="Find Gold">
                 </form>
@@ -76,7 +86,7 @@
             <div>
                 <h3>Cave</h3>
                 <p>(earns 5-10 golds)</p>
-                <form action="process.php" method="post">
+                <form action="ninja/cave" method="post">
                     <input type="hidden" name="action" value="cave">
                     <input type="submit" value="Find Gold">
                 </form>
@@ -84,7 +94,7 @@
             <div>
                 <h3>House</h3>
                 <p>(earns 2-5 golds)</p>
-                <form action="process.php" method="post">
+                <form action="ninja/house" method="post">
                     <input type="hidden" name="action" value="house">
                     <input type="submit" value="Find Gold">
                 </form>
@@ -92,7 +102,7 @@
             <div>
                 <h3>Casino</h3>
                 <p>(earns 0-50 golds)</p>
-                <form action="process.php" method="post">
+                <form action="ninja/casino" method="post">
                     <input type="hidden" name="action" value="casino">
                     <input type="submit" value="Find Gold">
                 </form>
@@ -101,21 +111,15 @@
         <span>Activity:</span>
         <div class="action">
             <?php
-                $activities_array = array();
-                if(isset($_SESSION['action'])){
-                    $activities_array = $_SESSION['action'];
-                }
-                if(isset($_SESSION['activities'])){
-                    $activities_array[] = $_SESSION['activities'];
-                }
-                $_SESSION['action'] = $activities_array;
-
-                foreach ($_SESSION['action'] as $action){
-                    echo $action;
-                }              
+                $process = $this->session->userdata('activities');
+                foreach($process as $msg){
+                    echo $msg;
+                }            
             ?>
         </div>
-
+        <form action="/">
+            <input type="submit" class="btn" value="Reset">
+        </form>
     </div>
 </body>
 </html>

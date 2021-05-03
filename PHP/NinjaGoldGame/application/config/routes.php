@@ -50,7 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'ninja/get_ninja';
-$route['process_form'] = 'surveys/process_form';
+$route['farm']  = 'ninja/farm';
+$route['cave']  = 'ninja/cave';
+$route['house'] = 'ninja/house';
+$route['casino'] = 'ninja/casino';
+// $route['restart'] = 'ninja/restart';
 // $route['hello'] = '/welcome/hello';
 // $route['say/hi'] = '/welcome/say/hi';
 $route['404_override'] = '';
