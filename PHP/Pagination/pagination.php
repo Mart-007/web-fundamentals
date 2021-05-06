@@ -26,6 +26,8 @@
 
         //determine number of total pages available
         echo $number_of_pages = $number_of_results/$results_per_page;
+
+        
     ?>
 </body>
 </html>
