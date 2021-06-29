@@ -40,7 +40,7 @@ class Leads extends CI_Controller {
 		$this->load->view("partials/search", $result);
 	}
 
-	/*This function takes in the date and returns all records within the specified date. Owner:Philip */
+	/*This function takes in the date and returns all records within the specified date.*/
 	public function process_date() {
 		$from = $this->security->xss_clean($this->input->post("from"));
 		$to = $this->security->xss_clean($this->input->post("to"));
@@ -48,7 +48,7 @@ class Leads extends CI_Controller {
 		$this->load->view("partials/search", $result);
 	}
 
-	/*DOCU This is the pagination function. Owner:Philip*/
+	/*DOCU This is the pagination function. */
 	private function pagination($count, $base) {
 		$config['total_rows'] = $count;
 		$config['per_page'] = 5;
