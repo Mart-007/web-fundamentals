@@ -10,7 +10,7 @@ class Tasks extends CI_Controller {
 		$this->load->library("form_validation");
 	}
 
-	/*DOCU Function that creates a new task: Owner: Philip */
+	/*DOCU Function that creates a new task */
 	public function addTask() {
 		$this->form_validation->set_rules("task", "Task", "required");
 		if ($this->form_validation->run() == FALSE) {
@@ -23,13 +23,13 @@ class Tasks extends CI_Controller {
 		}
 	}
 
-	/*DOCU Function to display edit form. Owner:Philip*/
+	/*DOCU Function to display edit form.*/
 	public function edit($id) {
 		$data["task"] = $this->task->get_task($id);
 		$this->load->view("partials/edit", $data);
 	}
 
-	/*DOCU Function to send edited post to server. Owner:Philip*/
+	/*DOCU Function to send edited post to server*/
 	public function process_edit() {
 		$this->form_validation->set_rules("task", "Task", "required");
 		if ($this->form_validation->run() == FALSE) {
@@ -43,20 +43,20 @@ class Tasks extends CI_Controller {
 		}
 	}
 
-	/*DOCU: This function is called after process edit and return the updated task: Owner:Philip */
+	/*DOCU: This function is called after process edit and return the updated task */
 	public function process_task($id) {
 		$data["task"] = $this->task->get_task($id);
 		$this->load->view("partials/task", $data);
 	}
 
-	/*DOCU: This function is deletes a task: Owner:Philip */
+	/*DOCU: This function is deletes a task */
 	public function delete_task($id) {
 		$this->task->remove_task($id);
 		echo $id;
 	}
 
 
-	/*DOCU Function that toggles if a task is completed or not. Owner:Philip*/
+	/*DOCU Function that toggles if a task is completed or not.*/
 	public function is_complete() {
 		$id = $this->input->post("id");
 		$this->task->toggle_task($id);
