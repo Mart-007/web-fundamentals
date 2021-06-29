@@ -14,7 +14,7 @@
 			$this->load->view("admin/home", $data);
 		}
 
-		/*DOCU This function logs out the current user and deletes all session data. Owner:Philip */
+		/*DOCU This function logs out the current user and deletes all session data. */
 		public function logout() {
 			session_destroy();
 			redirect("users");
