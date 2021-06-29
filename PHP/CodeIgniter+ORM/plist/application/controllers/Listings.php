@@ -19,7 +19,7 @@ class Listings extends CI_Controller{
 		$this->load->view("home", $products);
     }
 
-	/*DOCU This function saves a product to the database. Author:Philip */
+	/*DOCU This function saves a product to the database. */
 	public function add(){
 		$this->form_validation->set_rules("manufacturer", "Manufacturer", "required");
 		$this->form_validation->set_rules("name", "Product Name", "required|min_length[8]");
@@ -40,14 +40,14 @@ class Listings extends CI_Controller{
 			redirect("/");
         }
 	}
-	/*DOCU This function loads the edit product form. Author:Philip */
+	/*DOCU This function loads the edit product form. */
 	public function show_edit($id){
 		$product = new Product();
 		$get_data = array("get_data" => $product->get_by_id($id));
 		$this->load->view("edit", $get_data);
 	}
 
-	/* This function processes updating the product based on its id. Author:Philip*/ 
+	/* This function processes updating the product based on its id.*/ 
 	public function edit($id){
 		$product = new Product();
 		$products = $product->get_by_id($id);
@@ -71,7 +71,7 @@ class Listings extends CI_Controller{
 			redirect("/");
         }
 	}
-	/*DOCU This function deletes a product from the database: Author:Philip*/
+	/*DOCU This function deletes a product from the database:*/
     public function delete($id){
 		$product = new Product();
 		$product->where("id", $id)->get();
