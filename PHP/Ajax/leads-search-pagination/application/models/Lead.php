@@ -1,7 +1,7 @@
 <?php 
 	class Lead extends CI_Model {
 
-		/*DOCU Get leads data and pass to controller Owner: Philip */
+		/*DOCU Get leads data and pass to controller*/
 		public function get_leads($offset,$limit) {
 			$sql = "SELECT clients.client_id AS id,
 					COUNT(leads_id) AS leads,
@@ -41,7 +41,7 @@
 			return $query->num_rows();
 		}
 
-		/*DOCU Get leads based on search term Owner: Philip */
+		/*DOCU Get leads based on search term */
 		public function search_leads($search,$offset,$limit) {
 			$sql = "SELECT clients.client_id AS id,
 					clients.first_name AS first, clients.last_name AS last,
@@ -62,7 +62,7 @@
 			return $data;
 		}
 
-		/*DOCU Get records count based on search term Owner: Philip */
+		/*DOCU Get records count based on search term*/
 		public function search_count($search) {
 			$sql = "SELECT clients.client_id AS id,
 					clients.first_name AS first, clients.last_name AS last,
@@ -78,7 +78,7 @@
 			return $query->num_rows();
 		}
 
-		/*DOCU Get leads based on search term Owner: Philip */
+		/*DOCU Get leads based on search term */
 		public function count_search($search) {
 			$sql = "SELECT leads_id AS id,
 					clients.first_name AS first, clients.last_name AS last,
@@ -93,7 +93,7 @@
 			return $query->num_rows();
 		}
 
-		/*DOCU Get leads based on date Owner: Philip */
+		/*DOCU Get leads based on date */
 		public function search_by_date($from, $to) {
 			$sql = "SELECT clients.client_id AS id,
 					clients.first_name AS first, clients.last_name AS last,
