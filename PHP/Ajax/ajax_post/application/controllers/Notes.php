@@ -11,13 +11,13 @@ class Notes extends CI_Controller {
 		$this->load->model("note");
 	}
 
-	/* API Endpoint for getting notes, returns HTML partial. Owner: Philip*/
+	/* API Endpoint for getting notes, returns HTML partial.*/
 	public function note() {
 		$data["notes"] = $this->note->get_notes();
 		$this->load->view("partials/note", $data);
 	}
 
-	/* API Endpoint for getting notes, returns HTML partial. Owner: Philip*/
+	/* API Endpoint for getting notes, returns HTML partial*/
 	public function create() {
 		$this->form_validation->set_rules("note", "Note", "required");
 		if ($this->form_validation->run() == FALSE) {
